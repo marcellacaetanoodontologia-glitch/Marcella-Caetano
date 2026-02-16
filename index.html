@@ -21,7 +21,7 @@ textlux:'#2F2A24',
 footerdark:'#14110D'
 },
 fontFamily:{
-lux:['Inter','ui-sans-serif','system-uiGUE-serif']
+lux:['Inter','ui-sans-serif','system-ui']
 }
 }
 }
@@ -65,12 +65,12 @@ transform:translateY(-4px);
 box-shadow:0 28px 65px rgba(198,169,107,0.45);
 }
 
-/* HERO FLAGSHIP BACKGROUND */
+/* HERO FLAGSHIP */
 .hero-bg{
 background:url('assets/caparosto26.jpg') center right / cover no-repeat;
 }
 
-/* MOBILE FLAGSHIP */
+/* MOBILE AJUSTE */
 @media (max-width:768px){
 .hero-bg{
 background-position:60% center;
@@ -108,7 +108,6 @@ opacity:0;
 transform:translateY(50px);
 animation:fadeUp 1.2s cubic-bezier(.22,.61,.36,1) forwards;
 }
-
 @keyframes fadeUp{
 to{
 opacity:1;
@@ -158,7 +157,7 @@ Agendar avaliação
 </div>
 </header>
 
-<!-- HERO FLAGSHIP -->
+<!-- HERO -->
 <section class="hero-bg relative min-h-[100svh] flex items-center overflow-hidden">
 
 <div class="absolute inset-0 hero-light"></div>
@@ -182,8 +181,88 @@ Entrar no Grupo VIP
 </a>
 
 </div>
+</div>
+</section>
+
+<!-- PROCEDIMENTOS -->
+<section class="py-28">
+<div class="max-w-7xl mx-auto px-6">
+
+<h2 class="text-4xl font-semibold mb-14 tracking-tight">
+Procedimentos
+</h2>
+
+<div class="grid md:grid-cols-3 gap-12">
+
+<!-- Preenchimento Labial -->
+<div class="card-brand rounded-3xl overflow-hidden">
+<img src="assets/preenchimento.jpg" class="w-full h-64 object-cover">
+<div class="p-7">
+<h3 class="text-xl font-semibold mb-3">Preenchimento Labial</h3>
+<p class="text-sm leading-relaxed text-textlux/80">
+O preenchimento labial é um procedimento estético minimamente invasivo realizado com ácido hialurônico 
+para realçar o contorno, aumentar o volume e proporcionar mais simetria e hidratação aos lábios. 
+Com técnica precisa e personalizada, o objetivo é alcançar resultados naturais e harmônicos.
+</p>
+</div>
+</div>
+
+<!-- Protocolo Renasce -->
+<div class="card-brand rounded-3xl overflow-hidden">
+<img src="assets/microagulhamento.jpg" class="w-full h-64 object-cover">
+<div class="p-7">
+<h3 class="text-xl font-semibold mb-3">Protocolo Renasce</h3>
+<p class="text-sm text-textlux/80">
+Renovação profunda da pele com microagulhamento associado a ativos regeneradores e peelings.
+</p>
+</div>
+</div>
+
+<!-- Botox -->
+<div class="card-brand rounded-3xl overflow-hidden">
+<img src="assets/botox.jpg" class="w-full h-64 object-cover">
+<div class="p-7">
+<h3 class="text-xl font-semibold mb-3">Toxina Botulínica</h3>
+<p class="text-sm text-textlux/80">
+Suavização de linhas de expressão e prevenção do envelhecimento com naturalidade.
+</p>
+</div>
+</div>
 
 </div>
+</div>
+</section>
+
+<!-- BIO -->
+<section class="py-28 bg-off">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+<img src="assets/dra-marcella.jpg"
+class="rounded-3xl shadow-2xl w-full max-w-md mx-auto">
+
+<div>
+<h2 class="text-3xl font-semibold mb-6">
+Dra. Marcella Caetano
+</h2>
+
+<p class="text-lg leading-relaxed text-textlux/90">
+Cirurgiã-Dentista apaixonada por unir saúde, estética e bem-estar com atendimento humanizado e resultados naturais.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-28 text-center">
+<h2 class="text-3xl font-semibold mb-10">
+Promoções Exclusivas
+</h2>
+
+<a href="https://wa.me/5561992427214"
+class="btn-brand px-12 py-5 rounded-full text-lg">
+Entrar no Grupo VIP
+</a>
 </section>
 
 <!-- FOOTER -->
@@ -197,3 +276,4 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 </body>
 </html>
+
