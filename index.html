@@ -9,200 +9,176 @@
 
 <script>
 tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        primary: '#6FB7D9',
-        accent: '#F0C6D0'
-      },
-      fontFamily: {
-        sans: ['Inter', 'Poppins', 'ui-sans-serif', 'system-ui']
-      }
-    }
-  }
+theme: {
+extend: {
+colors: {
+off: '#F8F6F2',
+offsoft: '#EFEAE2',
+gold: '#C6A96B',
+goldhover: '#B89652',
+textlux: '#3A342B',
+footerdark: '#1F1B16'
+}
+}
+}
 }
 </script>
 
 <style>
 
-/* FUNDO PREMIUM */
+/* FUNDO OFF WHITE PREMIUM */
 body{
-  background:
-  radial-gradient(circle at 20% 10%, #f9efe4 0%, transparent 40%),
-  radial-gradient(circle at 90% 90%, #eef3f1 0%, transparent 40%),
-  linear-gradient(180deg,#ffffff 0%, #f8fafc 100%);
+background:
+radial-gradient(circle at 20% 10%, #ffffff 0%, transparent 40%),
+radial-gradient(circle at 90% 90%, #EFEAE2 0%, transparent 40%),
+linear-gradient(180deg,#F8F6F2 0%, #EFEAE2 100%);
+color:#3A342B;
 }
 
-/* HEADER */
+/* HEADER GLASS */
 header{
-  backdrop-filter: blur(16px);
-  background: rgba(255,255,255,0.75);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.04);
+backdrop-filter: blur(14px);
+background: rgba(248,246,242,0.8);
+border-bottom:1px solid rgba(198,169,107,0.15);
 }
 
-/* HERO */
-.hero-bg::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:
-  linear-gradient(90deg, rgba(255,255,255,0.96) 0%,
-  rgba(255,255,255,0.85) 35%,
-  rgba(255,255,255,0.2) 65%,
-  transparent 100%);
+/* HERO OVERLAY */
+.hero-overlay{
+background:
+linear-gradient(90deg,
+rgba(248,246,242,0.95) 0%,
+rgba(248,246,242,0.85) 35%,
+rgba(248,246,242,0.3) 65%,
+transparent 100%);
 }
 
-/* TEXTO GRADIENT */
-.text-gradient {
-  background: linear-gradient(90deg,#6FB7D9,#7fd3d9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* TEXTO DOURADO GRADIENT */
+.text-gold{
+background: linear-gradient(90deg,#C6A96B,#E3C98B);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
-/* BOTÕES PREMIUM */
-.btn-premium{
-  background: linear-gradient(135deg,#6FB7D9,#7ecfdc);
-  box-shadow: 0 10px 25px rgba(111,183,217,0.35);
-  transition: all .35s ease;
+/* BOTÃO DOURADO PREMIUM */
+.btn-gold{
+background: linear-gradient(135deg,#C6A96B,#E3C98B);
+color:white;
+box-shadow:0 12px 28px rgba(198,169,107,0.35);
+transition:.35s;
 }
 
-.btn-premium:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 18px 35px rgba(111,183,217,0.45);
+.btn-gold:hover{
+background: linear-gradient(135deg,#B89652,#D6B870);
+transform:translateY(-2px);
+box-shadow:0 18px 35px rgba(198,169,107,0.45);
 }
 
-/* CARDS */
-.card-premium{
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.6);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  transition: all .4s ease;
+/* CARDS PREMIUM */
+.card-lux{
+background: rgba(255,255,255,0.65);
+backdrop-filter: blur(10px);
+border:1px solid rgba(198,169,107,0.2);
+box-shadow:0 15px 35px rgba(0,0,0,0.05);
+transition:.4s;
 }
 
-.card-premium:hover{
-  transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+.card-lux:hover{
+transform:translateY(-6px);
+box-shadow:0 25px 50px rgba(0,0,0,0.12);
 }
 
-.card-premium img{
-  transition: transform .6s ease;
+.card-lux img{
+transition:.6s;
 }
 
-.card-premium:hover img{
-  transform: scale(1.05);
-}
-
-/* ANIMAÇÃO */
-.fade-up{
-  animation: fadeUp .8s ease both;
-}
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform: translateY(25px);
-  }
-  to{
-    opacity:1;
-    transform: translateY(0);
-  }
+.card-lux:hover img{
+transform:scale(1.05);
 }
 
 /* FOOTER */
 footer{
-  background: linear-gradient(180deg,#0F1724,#070c14);
+background: linear-gradient(180deg,#1F1B16,#0E0C09);
 }
 
 </style>
 </head>
 
-<body class="antialiased text-slate-800 font-sans">
+<body class="font-sans">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-40 border-b border-slate-100">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
-    <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
-        M
-      </div>
-      <span class="font-semibold">Marcella Caetano</span>
-    </div>
+<header class="sticky top-0 z-40">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-    <nav class="hidden md:flex gap-6 items-center">
-      <a href="#home">Home</a>
-      <a href="#servicos">Procedimentos</a>
-      <a href="#biografia">Biografia</a>
-      <a href="#contato">Contato</a>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-yellow-200 flex items-center justify-center text-white font-bold">
+M
+</div>
+<span class="font-semibold text-lg">Marcella Caetano</span>
+</div>
 
-      <a href="https://wa.me/5561992427214"
-      class="btn-premium text-white px-4 py-2 rounded-xl">
-      Agendar avaliação
-      </a>
-    </nav>
-  </div>
+<a href="https://wa.me/5561992427214"
+class="btn-gold px-5 py-2 rounded-xl text-sm">
+Agendar avaliação
+</a>
+
+</div>
 </header>
 
 <!-- HERO -->
-<section id="home"
-class="hero-bg relative min-h-[75vh] flex items-center"
-style="background-image:url('assets/capa.jpg'); background-size:cover; background-position:center right;">
+<section class="relative min-h-[80vh] flex items-center"
+style="background:url('assets/capa.jpg') center right/cover no-repeat;">
 
-<div class="max-w-7xl mx-auto px-6 py-20 relative fade-up">
+<div class="absolute inset-0 hero-overlay"></div>
 
-<h1 class="text-4xl md:text-6xl font-semibold leading-tight mb-4">
-Realce sua beleza <span class="text-gradient">de forma natural</span>
+<div class="relative max-w-7xl mx-auto px-6 py-24">
+
+<h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-6">
+Realce sua beleza <span class="text-gold">de forma natural</span>
 </h1>
 
-<p class="text-lg text-slate-700 mb-8 max-w-xl">
+<p class="text-lg max-w-xl mb-8">
 Harmonização orofacial com excelência técnica, cuidado individualizado e resultados naturais.
 </p>
 
 <a href="https://chat.whatsapp.com/Ea8URwXjcwD5qyMiQQkjoF"
-class="btn-premium text-white px-6 py-3 rounded-2xl inline-block">
-Acessar Grupo VIP
+class="btn-gold px-8 py-4 rounded-2xl inline-block">
+Entrar no Grupo VIP
 </a>
 
 </div>
 </section>
 
 <!-- PROCEDIMENTOS -->
-<section id="servicos" class="py-20">
+<section class="py-24">
 <div class="max-w-7xl mx-auto px-6">
 
-<h2 class="text-3xl md:text-4xl font-semibold mb-10">
+<h2 class="text-4xl font-semibold mb-12">
 Procedimentos
 </h2>
 
-<div class="grid md:grid-cols-3 gap-8">
+<div class="grid md:grid-cols-3 gap-10">
 
-<div class="card-premium rounded-2xl overflow-hidden">
-<img src="assets/preenchimento.jpg" class="w-full h-56 object-cover">
+<div class="card-lux rounded-2xl overflow-hidden">
+<img src="assets/preenchimento.jpg" class="w-full h-60 object-cover">
 <div class="p-6">
 <h3 class="text-xl font-semibold mb-3">Preenchimento Labial</h3>
-<p class="text-gray-600">
-Realça contorno, volume e hidratação com naturalidade e segurança.
-</p>
+<p>Volume, contorno e hidratação com naturalidade.</p>
 </div>
 </div>
 
-<div class="card-premium rounded-2xl overflow-hidden">
-<img src="assets/microagulhamento.jpg" class="w-full h-56 object-cover">
+<div class="card-lux rounded-2xl overflow-hidden">
+<img src="assets/microagulhamento.jpg" class="w-full h-60 object-cover">
 <div class="p-6">
 <h3 class="text-xl font-semibold mb-3">Protocolo Renasce</h3>
-<p class="text-gray-600">
-Renovação profunda da pele com estímulo de colágeno e ativos regeneradores.
-</p>
+<p>Renovação profunda e estímulo de colágeno.</p>
 </div>
 </div>
 
-<div class="card-premium rounded-2xl overflow-hidden">
-<img src="assets/botox.jpg" class="w-full h-56 object-cover">
+<div class="card-lux rounded-2xl overflow-hidden">
+<img src="assets/botox.jpg" class="w-full h-60 object-cover">
 <div class="p-6">
 <h3 class="text-xl font-semibold mb-3">Toxina Botulínica</h3>
-<p class="text-gray-600">
-Suaviza linhas de expressão mantendo naturalidade facial.
-</p>
+<p>Suavização elegante das linhas de expressão.</p>
 </div>
 </div>
 
@@ -211,40 +187,39 @@ Suaviza linhas de expressão mantendo naturalidade facial.
 </section>
 
 <!-- BIO -->
-<section id="biografia" class="py-20 bg-white">
-<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+<section class="py-24 bg-off">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
 <img src="assets/dra-marcella.jpg"
 class="rounded-2xl shadow-xl w-full max-w-md mx-auto">
 
 <div>
-<h2 class="text-3xl font-semibold mb-4">
+<h2 class="text-3xl font-semibold mb-6">
 Dra. Marcella Caetano
 </h2>
 
-<p class="text-lg text-slate-700">
-Cirurgiã-dentista apaixonada por unir saúde, estética e bem-estar.
-Atendimento personalizado com foco em naturalidade, segurança e acolhimento.
+<p class="text-lg leading-relaxed">
+Cirurgiã-dentista apaixonada por unir saúde, estética e bem-estar com atendimento humanizado e resultados naturais.
 </p>
 </div>
 
 </div>
 </section>
 
-<!-- CONTATO -->
-<section id="contato" class="py-20 text-center">
-<h2 class="text-3xl font-semibold mb-6">
+<!-- CTA -->
+<section class="py-24 text-center">
+<h2 class="text-3xl font-semibold mb-8">
 Promoções Exclusivas
 </h2>
 
 <a href="https://wa.me/5561992427214"
-class="btn-premium text-white px-8 py-4 rounded-full text-lg">
+class="btn-gold px-10 py-5 rounded-full text-lg">
 Entrar no Grupo VIP
 </a>
 </section>
 
 <!-- FOOTER -->
-<footer class="text-white py-8 text-center text-sm">
+<footer class="text-white py-10 text-center text-sm">
 © <span id="year"></span> Marcella Caetano — Todos os direitos reservados.
 </footer>
 
@@ -254,5 +229,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 </body>
 </html>
+
 
 
