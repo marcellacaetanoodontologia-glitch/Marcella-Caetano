@@ -21,7 +21,7 @@ textlux:'#2F2A24',
 footerdark:'#14110D'
 },
 fontFamily:{
-lux:['Inter','ui-sans-serif','system-ui']
+lux:['Inter','ui-sans-serif','system-uiGUE-serif']
 }
 }
 }
@@ -30,7 +30,7 @@ lux:['Inter','ui-sans-serif','system-ui']
 
 <style>
 
-/* FUNDO INTERNACIONAL */
+/* FUNDO */
 body{
 background:
 radial-gradient(circle at 10% 10%, #ffffff 0%, transparent 40%),
@@ -39,34 +39,59 @@ linear-gradient(180deg,#F8F6F2 0%, #EFEAE2 100%);
 color:#2F2A24;
 }
 
-/* HEADER PREMIUM REAL */
+/* HEADER */
 header{
 backdrop-filter: blur(20px);
 background: rgba(248,246,242,0.72);
 border-bottom:1px solid rgba(198,169,107,0.12);
 }
 
-/* TEXTO GOLD INTERNACIONAL */
+/* TEXTO GOLD */
 .text-gold{
 background: linear-gradient(90deg,#C6A96B,#E6D3A3);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-/* BOTÃO MARCA */
+/* BOTÃO */
 .btn-brand{
 background: linear-gradient(135deg,#C6A96B,#E6D3A3);
 color:white;
 box-shadow:0 18px 45px rgba(198,169,107,0.35);
 transition:.45s cubic-bezier(.22,.61,.36,1);
 }
-
 .btn-brand:hover{
 transform:translateY(-4px);
 box-shadow:0 28px 65px rgba(198,169,107,0.45);
 }
 
-/* HERO LAYER PRO */
+/* HERO FLAGSHIP BACKGROUND */
+.hero-bg{
+background:url('assets/caparosto26.jpg') center right / cover no-repeat;
+}
+
+/* MOBILE FLAGSHIP */
+@media (max-width:768px){
+.hero-bg{
+background-position:60% center;
+}
+}
+
+/* TELAS MUITO PEQUENAS */
+@media (max-width:420px){
+.hero-bg{
+background-position:65% center;
+}
+}
+
+/* TELAS GRANDES */
+@media (min-width:1400px){
+.hero-bg{
+background-position:center right;
+}
+}
+
+/* HERO OVERLAY */
 .hero-light{
 background:
 linear-gradient(90deg,
@@ -77,20 +102,7 @@ rgba(248,246,242,0.30) 70%,
 transparent 100%);
 }
 
-/* HERO BG RESPONSIVO (AJUSTE FEITO AQUI) */
-.hero-bg{
-background:url('assets/caparosto26.jpg') center right / cover no-repeat;
-}
-
-@media (max-width: 768px){
-.hero-bg{
-background-position:center top;
-background-size:contain;
-background-repeat:no-repeat;
-}
-}
-
-/* ANIMAÇÃO INTERNACIONAL */
+/* ANIMAÇÃO */
 .fade-up{
 opacity:0;
 transform:translateY(50px);
@@ -104,7 +116,7 @@ transform:translateY(0);
 }
 }
 
-/* CARD EDITORIAL */
+/* CARDS */
 .card-brand{
 background: rgba(255,255,255,0.7);
 backdrop-filter: blur(14px);
@@ -112,7 +124,6 @@ border:1px solid rgba(198,169,107,0.18);
 box-shadow:0 25px 55px rgba(0,0,0,0.07);
 transition:.5s cubic-bezier(.22,.61,.36,1);
 }
-
 .card-brand:hover{
 transform:translateY(-10px);
 box-shadow:0 35px 75px rgba(0,0,0,0.15);
@@ -147,8 +158,8 @@ Agendar avaliação
 </div>
 </header>
 
-<!-- HERO INTERNACIONAL -->
-<section class="hero-bg relative min-h-[95vh] flex items-center overflow-hidden">
+<!-- HERO FLAGSHIP -->
+<section class="hero-bg relative min-h-[100svh] flex items-center overflow-hidden">
 
 <div class="absolute inset-0 hero-light"></div>
 
@@ -175,117 +186,6 @@ Entrar no Grupo VIP
 </div>
 </section>
 
-<!-- PROCEDIMENTOS -->
-<section class="py-28">
-<div class="max-w-7xl mx-auto px-6">
-
-<h2 class="text-4xl font-semibold mb-14 tracking-tight">
-Procedimentos
-</h2>
-
-<div class="grid md:grid-cols-3 gap-12">
-
-<div class="card-brand rounded-3xl overflow-hidden">
-<img src="assets/preenchimento.jpg" class="w-full h-64 object-cover">
-<div class="p-7">
-<h3 class="text-xl font-semibold mb-3">Preenchimento Labial</h3>
-<p class="text-sm leading-relaxed text-textlux/80">
-O preenchimento labial é um procedimento estético minimamente invasivo realizado com ácido hialurônico 
-para realçar o contorno, aumentar o volume e proporcionar mais simetria e hidratação aos lábios. 
-Com técnica precisa e personalizada, o objetivo é alcançar resultados naturais, harmônicos e de acordo com as 
-características individuais de cada paciente — valorizando a beleza sem exageros. Além de dar mais definição,
-o procedimento também pode suavizar linhas ao redor da boca, melhorar a projeção dos lábios e restaurar o volume perdido com o tempo.
-</p>
-</div>
-</div>
-
-<div class="card-brand rounded-3xl overflow-hidden">
-<img src="assets/microagulhamento.jpg" class="w-full h-64 object-cover">
-<div class="p-7">
-<h3 class="text-xl font-semibold mb-3">Protocolo Renasce</h3>
-<p class="text-sm text-textlux/80">
-O Protocolo Renasce foi desenvolvido para quem deseja restaurar o viço, a textura e a vitalidade natural da pele, 
-unindo o que há de mais eficaz na estética facial: microagulhamento com ativos regeneradores e peeling.
-Mais do que um tratamento, é um processo de renovação profunda.
-O microagulhamento estimula a produção de colágeno e aumenta a permeabilidade da pele,
-potencializando a absorção de ativos selecionados conforme a necessidade de cada paciente — clareadores, hidratantes, 
-firmadores ou antioxidantes.
-</p>
-</div>
-</div>
-
-<div class="card-brand rounded-3xl overflow-hidden">
-<img src="assets/botox.jpg" class="w-full h-64 object-cover">
-<div class="p-7">
-<h3 class="text-xl font-semibold mb-3">Toxina Botulínica</h3>
-<p class="text-sm text-textlux/80">
-A toxina botulínica é um procedimento estético não cirúrgico indicado para suavizar rugas e linhas de expressão,
-proporcionando um aspecto mais jovial, descansado e natural ao rosto. Por meio da aplicação em pontos estratégicos, 
-o Botox atua relaxando a musculatura responsável pelas marcas dinâmicas — aquelas que aparecem com movimentos como sorrir, 
-levantar a sobrancelha ou franzir a testa. 
-O tratamento também pode ser utilizado de forma preventiva, ajudando a retardar o surgimento de linhas profundas ao longo do tempo.
-</p>
-</div>
-</div>
-
-<div class="card-brand rounded-3xl overflow-hidden">
-<img src="assets/facial.jpg" class="w-full h-64 object-cover">
-<div class="p-7">
-<h3 class="text-xl font-semibold mb-3">Preenchimento Facial</h3>
-<p class="text-sm text-textlux/80">
-O preenchimento facial é um dos procedimentos mais versáteis da estética moderna, indicado para harmonizar, 
-revitalizar e devolver o volume natural do rosto de forma sutil e personalizada. Realizado com ácido hialurônico,
-uma substância biocompatível presente naturalmente no corpo, o tratamento permite repor estruturas de sustentação, 
-suavizar sulcos e realçar pontos de beleza como maçãs do rosto, mandíbula, 
-queixo e lábios — sempre respeitando a anatomia e a naturalidade de cada paciente. Mais do que preencher,
-o objetivo é restaurar proporções, equilíbrio e leveza, valorizando o que já é bonito em você.
-</p>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- BIO -->
-<section class="py-28 bg-off">
-<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-
-<img src="assets/dra-marcella.jpg"
-class="rounded-3xl shadow-2xl w-full max-w-md mx-auto">
-
-<div>
-<h2 class="text-3xl font-semibold mb-6">
-Dra. Marcella Caetano
-</h2>
-
-<p class="text-lg leading-relaxed text-textlux/90">
-Sou Cirurgiã-Dentista, apaixonada por unir saúde, estética e bem-estar em cada atendimento. 
-Atuo ajudando mulheres a recuperarem a confiança e valorizarem sua beleza natural, 
-com técnicas seguras e resultados sutis — daqueles que realçam, sem descaracterizar. 
-Ao longo da minha trajetória, aperfeiçoei protocolos personalizados, voltados para harmonização facial,
-bioestimulação de colágeno e procedimentos odontológicos, sempre com foco em naturalidade e acolhimento. Hoje, 
-atuo em meu próprio consultório, um espaço pensado para oferecer experiência, cuidado e resultados reais, 
-onde cada detalhe é planejado para que você se sinta confiante e à vontade. Mais do que transformar 
-aparências, meu propósito é transformar percepções sobre si, sobre beleza, sobre se permitir cuidar. ✨
-</p>
-</div>
-
-</div>
-</section>
-
-<!-- CTA -->
-<section class="py-28 text-center">
-<h2 class="text-3xl font-semibold mb-10">
-Promoções Exclusivas
-</h2>
-
-<a href="https://wa.me/5561992427214"
-class="btn-brand px-12 py-5 rounded-full text-lg">
-Entrar no Grupo VIP
-</a>
-</section>
-
 <!-- FOOTER -->
 <footer class="text-white py-12 text-center text-sm tracking-wide">
 © <span id="year"></span> Marcella Caetano — Todos os direitos reservados.
@@ -297,5 +197,3 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 </body>
 </html>
-
-
