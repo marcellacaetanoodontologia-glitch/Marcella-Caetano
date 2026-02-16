@@ -12,12 +12,13 @@ tailwind.config = {
 theme: {
 extend: {
 colors: {
-off: '#F8F6F2',
-offsoft: '#EFEAE2',
-gold: '#C6A96B',
-goldhover: '#B89652',
-textlux: '#3A342B',
-footerdark: '#1F1B16'
+off:'#F8F6F2',
+offsoft:'#EFEAE2',
+gold:'#C6A96B',
+goldsoft:'#E3C98B',
+goldhover:'#B89652',
+textlux:'#3A342B',
+footerdark:'#1F1B16'
 }
 }
 }
@@ -26,65 +27,69 @@ footerdark: '#1F1B16'
 
 <style>
 
-/* FUNDO OFF WHITE PREMIUM */
+/* FUNDO PREMIUM */
 body{
 background:
-radial-gradient(circle at 20% 10%, #ffffff 0%, transparent 40%),
-radial-gradient(circle at 90% 90%, #EFEAE2 0%, transparent 40%),
+radial-gradient(circle at 15% 10%, #ffffff 0%, transparent 40%),
+radial-gradient(circle at 85% 90%, #EFEAE2 0%, transparent 40%),
 linear-gradient(180deg,#F8F6F2 0%, #EFEAE2 100%);
 color:#3A342B;
 }
 
-/* HEADER GLASS */
+/* HEADER GLASS REAL */
 header{
-backdrop-filter: blur(14px);
-background: rgba(248,246,242,0.8);
+backdrop-filter: blur(18px);
+background: rgba(248,246,242,0.75);
 border-bottom:1px solid rgba(198,169,107,0.15);
 }
 
-/* HERO OVERLAY */
-.hero-overlay{
-background:
-linear-gradient(90deg,
-rgba(248,246,242,0.95) 0%,
-rgba(248,246,242,0.85) 35%,
-rgba(248,246,242,0.3) 65%,
-transparent 100%);
-}
-
-/* TEXTO DOURADO GRADIENT */
+/* TEXTO DOURADO PREMIUM */
 .text-gold{
 background: linear-gradient(90deg,#C6A96B,#E3C98B);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-/* BOTÃO DOURADO PREMIUM */
+/* BOTÃO PREMIUM ABSOLUTO */
 .btn-gold{
 background: linear-gradient(135deg,#C6A96B,#E3C98B);
 color:white;
-box-shadow:0 12px 28px rgba(198,169,107,0.35);
-transition:.35s;
+box-shadow:0 15px 35px rgba(198,169,107,0.35);
+transition:.4s;
 }
 
 .btn-gold:hover{
 background: linear-gradient(135deg,#B89652,#D6B870);
-transform:translateY(-2px);
-box-shadow:0 18px 35px rgba(198,169,107,0.45);
+transform:translateY(-3px);
+box-shadow:0 25px 50px rgba(198,169,107,0.45);
+}
+
+/* HERO ANIMAÇÃO */
+.animate-fadeUp{
+opacity:0;
+transform:translateY(40px);
+animation:fadeUpHero 1.2s ease forwards;
+}
+
+@keyframes fadeUpHero{
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 /* CARDS PREMIUM */
 .card-lux{
 background: rgba(255,255,255,0.65);
-backdrop-filter: blur(10px);
+backdrop-filter: blur(12px);
 border:1px solid rgba(198,169,107,0.2);
-box-shadow:0 15px 35px rgba(0,0,0,0.05);
-transition:.4s;
+box-shadow:0 20px 40px rgba(0,0,0,0.06);
+transition:.45s;
 }
 
 .card-lux:hover{
-transform:translateY(-6px);
-box-shadow:0 25px 50px rgba(0,0,0,0.12);
+transform:translateY(-8px);
+box-shadow:0 30px 60px rgba(0,0,0,0.14);
 }
 
 .card-lux img{
@@ -92,7 +97,7 @@ transition:.6s;
 }
 
 .card-lux:hover img{
-transform:scale(1.05);
+transform:scale(1.06);
 }
 
 /* FOOTER */
@@ -106,7 +111,7 @@ background: linear-gradient(180deg,#1F1B16,#0E0C09);
 <body class="font-sans">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-40">
+<header class="sticky top-0 z-50">
 <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
 <div class="flex items-center gap-3">
@@ -117,35 +122,52 @@ M
 </div>
 
 <a href="https://wa.me/5561992427214"
-class="btn-gold px-5 py-2 rounded-xl text-sm">
+class="btn-gold px-6 py-2 rounded-xl text-sm">
 Agendar avaliação
 </a>
 
 </div>
 </header>
 
-<!-- HERO -->
-<section class="relative min-h-[80vh] flex items-center"
+<!-- HERO ABSOLUTO -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden"
 style="background:url('assets/caparosto26.jpg') center right/cover no-repeat;">
 
-<div class="absolute inset-0 hero-overlay"></div>
+<!-- OVERLAY MULTICAMADAS -->
+<div class="absolute inset-0">
 
-<div class="relative max-w-7xl mx-auto px-6 py-24">
+<div class="absolute inset-0"
+style="background:linear-gradient(90deg,
+rgba(248,246,242,0.98) 0%,
+rgba(248,246,242,0.95) 25%,
+rgba(248,246,242,0.75) 45%,
+rgba(248,246,242,0.35) 65%,
+transparent 100%);"></div>
 
-<h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-6">
-  Realce sua beleza
-  <span class="text-gold block">De forma natural</span>
+<div class="absolute inset-0"
+style="background:radial-gradient(circle at 20% 10%, rgba(255,255,255,0.6), transparent 60%);"></div>
+
+</div>
+
+<div class="relative w-full max-w-7xl mx-auto px-6 py-24 flex items-center">
+
+<div class="max-w-xl animate-fadeUp">
+
+<h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-6 tracking-tight">
+Realce sua beleza
+<span class="text-gold block mt-2">De forma natural</span>
 </h1>
 
-
-<p class="text-lg max-w-xl mb-8">
+<p class="text-lg max-w-lg mb-10 text-textlux/90 leading-relaxed">
 Harmonização orofacial com excelência técnica, cuidado individualizado e resultados naturais.
 </p>
 
 <a href="https://chat.whatsapp.com/Ea8URwXjcwD5qyMiQQkjoF"
-class="btn-gold px-8 py-4 rounded-2xl inline-block">
+class="btn-gold px-9 py-4 rounded-2xl inline-block text-lg">
 Entrar no Grupo VIP
 </a>
+
+</div>
 
 </div>
 </section>
@@ -164,13 +186,7 @@ Procedimentos
 <img src="assets/preenchimento.jpg" class="w-full h-60 object-cover">
 <div class="p-6">
 <h3 class="text-xl font-semibold mb-3">Preenchimento Labial</h3>
-<p>O preenchimento labial é um procedimento estético minimamente invasivo 
-  realizado com ácido hialurônico para realçar o contorno, 
-  aumentar o volume e proporcionar mais simetria e hidratação aos lábios. 
-  Com técnica precisa e personalizada, o objetivo é alcançar resultados naturais, 
-  harmônicos e de acordo com as características individuais de cada paciente — valorizando a beleza sem exageros. 
-  Além de dar mais definição, o procedimento também pode suavizar 
-  linhas ao redor da boca, melhorar a projeção dos lábios e restaurar o volume perdido com o tempo.</p>
+<p>Realce de contorno, volume e hidratação com ácido hialurônico, mantendo naturalidade e harmonia facial.</p>
 </div>
 </div>
 
@@ -178,7 +194,7 @@ Procedimentos
 <img src="assets/microagulhamento.jpg" class="w-full h-60 object-cover">
 <div class="p-6">
 <h3 class="text-xl font-semibold mb-3">Protocolo Renasce</h3>
-<p>Renovação profunda e estímulo de colágeno.</p>
+<p>Renovação profunda da pele com estímulo natural de colágeno.</p>
 </div>
 </div>
 
@@ -186,7 +202,7 @@ Procedimentos
 <img src="assets/botox.jpg" class="w-full h-60 object-cover">
 <div class="p-6">
 <h3 class="text-xl font-semibold mb-3">Toxina Botulínica</h3>
-<p>Suavização elegante das linhas de expressão.</p>
+<p>Suavização elegante das linhas de expressão com resultado natural.</p>
 </div>
 </div>
 
@@ -237,9 +253,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 </body>
 </html>
-
-
-
 
 
 
